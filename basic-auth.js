@@ -37,7 +37,7 @@ module.exports = function (callback, realm) {
 
             callback(credentials, req, res, function(err) {
                 if (err) {
-                    unauthorized(res);
+                    unauthorized(res, true);
                     next(err);
                     return;
                 }
